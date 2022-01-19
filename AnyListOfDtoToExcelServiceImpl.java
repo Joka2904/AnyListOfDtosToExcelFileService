@@ -21,7 +21,7 @@ public class AnyListOfDtoToExcelServiceImpl {
         XSSFWorkbook workbook = new XSSFWorkbook();
 
         String mainSheetName = anyDto.get(0).getClass().getSimpleName();
-        log.warn(mainSheetName);
+        
         Map<String, Integer> indexOfRow = new HashMap<>();
         getSheet(workbook, mainSheetName, indexOfRow);
 

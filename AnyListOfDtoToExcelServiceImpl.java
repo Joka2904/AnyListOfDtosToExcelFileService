@@ -2,7 +2,6 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -14,11 +13,9 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Service
-@Slf4j
 @RequiredArgsConstructor
-public class AnyListOfDtoToExcelServiceImpl implements AnyListOfDtoToExcelService {
+public class AnyListOfDtoToExcelServiceImpl {
 
-    @Override
     public StreamingResponseBody anyDtoToExcel(List<?> anyDto) {
 
         XSSFWorkbook workbook = new XSSFWorkbook();
